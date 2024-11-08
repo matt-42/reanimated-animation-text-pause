@@ -28,7 +28,7 @@ export function ChangingText() {
 
 }
 
-
+// No pause with react Animated. (but slower animation)
 // export default function App() {
 //   const fadeAnim = useAnimatedValue(0);
 //   ReactAnimated.loop(ReactAnimated.sequence([
@@ -54,10 +54,11 @@ export default function App() {
       <Animated.View style={[{position: "absolute"}, useAnimatedStyle(() => ({
         top: withRepeat(withSequence(withTiming(0, {duration: 2000}), withTiming(200, {duration: 2000}), withTiming(0, {duration: 2000})), -1)
       }))]}>
-      {/* {Array(50).fill(0).map((i, idx) => <Text key={idx}>hello {idx}</Text>
-      )} */}
-      {Array(50).fill(0).map((i, idx) => <View><Text key={idx}>hello {idx}</Text></View>
+      {Array(50).fill(0).map((i, idx) => <Text key={idx}>hello {idx}</Text>
       )}
+      {/* No pause when text is wrapped in a view */}
+      {/* {Array(50).fill(0).map((i, idx) => <View><Text key={idx}>hello {idx}</Text></View>
+      )} */}
       </Animated.View>
       <ChangingText/>
     </View>
