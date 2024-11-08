@@ -3,6 +3,7 @@
     "name": "text-relayout-repro3",
     "slug": "text-relayout-repro3",
     "version": "1.0.0",
+    "jsEngine": "hermes",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -19,7 +20,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.matt42.textrelayoutrepro3"
     },
     "web": {
       "favicon": "./assets/favicon.png"
