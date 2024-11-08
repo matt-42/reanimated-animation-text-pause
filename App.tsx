@@ -1,15 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text as DefaultText, TextProps, View, useAnimatedValue, Animated as ReactAnimated } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import  Animated, { useAnimatedStyle, withRepeat, withSequence, withTiming } from 'react-native-reanimated';
-
-export const Text = React.forwardRef<DefaultText, TextProps>((props, ref) => {
-  const { style,  ...otherProps } = props;
-  // const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
-
-  // return <DefaultText ref={ref} {...otherProps} />;
-  return <DefaultText ref={ref} style={[{ color:"black",  fontFamily: 'sans', fontSize: 30 }, style]} {...otherProps} />;
-})
 
 
 export function ChangingText() {
